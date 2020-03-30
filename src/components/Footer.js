@@ -10,7 +10,7 @@ const Footer = () => {
       <div className={styles.links}>
         {links.map((item, index) => {
           return (
-            <Link key={index} to={item.path}>
+            <Link key={index} to={item.path} activeStyle={{ color: "#3fd0d4" }}>
               {item.text}
             </Link>
           )
@@ -31,6 +31,7 @@ const Footer = () => {
           )
         })}
       </div>
+
       <div className={styles.copyright}>
         copyright &copy; backroads travel company {new Date().getFullYear()} all
         rights reserved

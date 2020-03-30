@@ -8,6 +8,7 @@ import logo from "../images/logo.svg"
 
 const Navbar = () => {
   const [isOpen, setNav] = useState(false)
+
   const toggleNav = () => {
     setNav(isOpen => !isOpen)
   }
@@ -32,7 +33,9 @@ const Navbar = () => {
         >
           {links.map((item, index) => (
             <li key={index}>
-              <Link to={item.path}>{item.text}</Link>
+              <Link to={item.path} activeStyle={{ color: "#3fd0d4" }}>
+                {item.text}
+              </Link>
             </li>
           ))}
         </ul>
