@@ -1,6 +1,6 @@
 import React from "react"
 import Layout from "../components/Layout"
-import Button from "../examples"
+import Button from "../examples/Button"
 
 const tours = () => {
   return (
