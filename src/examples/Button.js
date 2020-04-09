@@ -8,3 +8,7 @@ const Button = styled.button`
 `
 
 export default Button
+
+// usage:
+// <Button>first button</Button>
+// <Button color="yellow">second button</Button>
