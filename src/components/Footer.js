@@ -1,8 +1,8 @@
-import React from "react"
-import styles from "../css/footer.module.css"
-import links from "../constants/links"
-import socialIcons from "../constants/social-icons"
-import { Link } from "gatsby"
+import React from 'react'
+import styles from '../css/footer.module.css'
+import links from '../constants/links'
+import socialIcons from '../constants/social-icons'
+import { Link } from 'gatsby'
 
 const Footer = () => {
   return (
@@ -10,7 +10,7 @@ const Footer = () => {
       <div className={styles.links}>
         {links.map((item, index) => {
           return (
-            <Link key={index} to={item.path} activeStyle={{ color: "#3fd0d4" }}>
+            <Link key={index} to={item.path} activeStyle={{ color: '#3fd0d4' }}>
               {item.text}
             </Link>
           )

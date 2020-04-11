@@ -6,11 +6,21 @@
 
 module.exports = {
   siteMetadata: {
-    title: "BackRoads!",
+    title: 'BackRoads!!!',
     description:
-      "Explore awesome worldwide tours & discover what makes each of them unique. Forget your daily routine& say yes to adventure",
-    author: "@johndoe",
-    data: ["item1", "item2"],
+      'Explore awesome worldwide tours & discover what makes each of them unique. Forget your daily routine& say yes to adventure',
+    author: '@johndoe',
+    data: ['item1', 'item2'],
   },
-  plugins: [`gatsby-plugin-styled-components`],
+  plugins: [
+    `gatsby-plugin-styled-components`,
+    `gatsby-plugin-react-helmet`,
+    {
+      resolve: `gatsby-source-filesystem`,
+      options: {
+        name: `images`,
+        path: `${__dirname}/src/images/`,
+      },
+    },
+  ],
 }

@@ -1,19 +1,19 @@
 const links = [
   {
-    path: "/",
-    text: "home",
+    path: '/',
+    text: 'home',
   },
   {
-    path: "/tours",
-    text: "tours",
+    path: '/tours',
+    text: 'tours',
   },
   {
-    path: "/blog",
-    text: "blog",
+    path: '/blog',
+    text: 'blog',
   },
   {
-    path: "/contact",
-    text: "contact",
+    path: '/contact',
+    text: 'contact',
   },
 ]
 

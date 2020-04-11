@@ -1,10 +1,10 @@
-import React, { useState } from "react"
-import { Link } from "gatsby"
-import styles from "../css/navbar.module.css"
-import { FaAlignRight } from "react-icons/fa"
-import links from "../constants/links"
-import socialIcons from "../constants/social-icons"
-import logo from "../images/logo.svg"
+import React, { useState } from 'react'
+import { Link } from 'gatsby'
+import styles from '../css/navbar.module.css'
+import { FaAlignRight } from 'react-icons/fa'
+import links from '../constants/links'
+import socialIcons from '../constants/social-icons'
+import logo from '../images/logo.svg'
 
 const Navbar = () => {
   const [isOpen, setNav] = useState(false)
@@ -33,7 +33,7 @@ const Navbar = () => {
         >
           {links.map((item, index) => (
             <li key={index}>
-              <Link to={item.path} activeStyle={{ color: "#3fd0d4" }}>
+              <Link to={item.path} activeStyle={{ color: '#3fd0d4' }}>
                 {item.text}
               </Link>
             </li>

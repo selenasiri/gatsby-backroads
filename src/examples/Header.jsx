@@ -1,8 +1,8 @@
-import React from "react"
-import { useStaticQuery, graphql } from "gatsby"
+import React from 'react'
+import { useStaticQuery, graphql } from 'gatsby'
 
 const getSiteData = graphql`
-   {
+  {
     site {
       siteMetadata {
         title
@@ -13,7 +13,7 @@ const getSiteData = graphql`
 `
 const Header = () => {
   const data = useStaticQuery(getSiteData)
- 
+
   return (
     <div>
       <h1>title: {data.site.siteMetadata.title}</h1>

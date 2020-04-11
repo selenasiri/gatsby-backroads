@@ -1,12 +1,14 @@
-import React from "react"
-import { graphql } from "gatsby"
-import Layout from "../components/Layout"
+import React from 'react'
+import { graphql } from 'gatsby'
+import Layout from '../components/Layout'
+import SEO from '../components/SEO'
 
-const blog = ({data}) => {
-  console.log("yyy", data)
+const blog = ({ data }) => {
+  console.log('yyy', data)
 
   return (
     <Layout>
+      <SEO title="Blog" />
       <h1>blog</h1>
 
       <h1>title: {data.site.siteMetadata.title}</h1>

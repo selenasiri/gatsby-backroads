@@ -1,5 +1,5 @@
-import React from "react"
-import { StaticQuery, graphql } from "gatsby"
+import React from 'react'
+import { StaticQuery, graphql } from 'gatsby'
 // old time way
 const getSiteData = graphql`
   query GetSiteData2 {
@@ -27,8 +27,3 @@ const RegularHeader = () => (
 )
 
 export default RegularHeader
-
-
-
-
-
