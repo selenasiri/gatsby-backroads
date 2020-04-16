@@ -9,7 +9,7 @@ import SEO from '../components/SEO'
 import StyledHero from '../components/StyledHero'
 import { graphql } from 'gatsby'
 
-const Index = ({ data }) => (
+const IndexPage = ({ data }) => (
   <Layout>
     <SEO title="Home" />
     <StyledHero home="true" img={data.defaultBcg.childImageSharp.fluid}>
@@ -39,4 +39,4 @@ export const query = graphql`
     }
   }
 `
-export default Index
+export default IndexPage

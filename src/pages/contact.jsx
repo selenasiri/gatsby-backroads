@@ -18,8 +18,6 @@ const ContactPage = ({ data }) => {
   )
 }
 
-export default ContactPage
-
 export const query = graphql`
   query {
     contactBcg: file(relativePath: { eq: "connectBcg.jpeg" }) {
@@ -31,3 +29,5 @@ export const query = graphql`
     }
   }
 `
+
+export default ContactPage

@@ -6,7 +6,7 @@ import SEO from '../components/SEO'
 import StyledHero from '../components/StyledHero'
 import { graphql } from 'gatsby'
 
-const tours = ({ data }) => {
+const toursPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Tours" />
@@ -17,8 +17,6 @@ const tours = ({ data }) => {
     </Layout>
   )
 }
-
-export default tours
 
 export const query = graphql`
   query {
@@ -31,3 +29,4 @@ export const query = graphql`
     }
   }
 `
+export default toursPage
