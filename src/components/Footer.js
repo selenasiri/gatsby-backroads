@@ -3,6 +3,7 @@ import styles from '../css/footer.module.css'
 import links from '../constants/links'
 import socialIcons from '../constants/social-icons'
 import { Link } from 'gatsby'
+import Anilink from "gatsby-plugin-transition-link/Anilink"
 
 const Footer = () => {
   return (
