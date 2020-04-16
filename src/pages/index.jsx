@@ -6,12 +6,14 @@ import Banner from '../components/Banner'
 import About from '../components/Home/About'
 import Services from '../components/Home/Services'
 import SEO from '../components/SEO'
+import {graphql} from 'gatsby'
+export default ({data}) => (
 
 const index = () => (
   <Layout>
-    <SEO title="Home" />
-    <SimpleHero>
-      <Banner
+    {/* <SEO title="Home" /> */}
+    <StyledHero home="true" img={data.defaultBcg.childImageSharp.fluid}>
+<Banner
         title="continue exploring"
         info=" Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, aut?"
       >
@@ -19,10 +21,21 @@ const index = () => (
           explore tours
         </Link>
       </Banner>
-    </SimpleHero>
+    </StyledHero>
+      
     <About />
     <Services />
   </Layout>
 )
-
-export default index
+)
+export const query `
+query {
+  defaultBcg: file(relativePath:{eq:"defaultBcg.jpeg"}){
+    childImageSharp{
+      fluid(quality:90, maxWidth:4160){
+        src
+      }
+    }
+  }
+}
+`
