@@ -6,16 +6,14 @@ import Banner from '../components/Banner'
 import About from '../components/Home/About'
 import Services from '../components/Home/Services'
 import SEO from '../components/SEO'
-import StyledHero from "../components/StyledHero"
-import {graphql} from 'gatsby'
+import StyledHero from '../components/StyledHero'
+import { graphql } from 'gatsby'
 
-export default ({data}) => (
-
-const index = () => (
+const Index = ({ data }) => (
   <Layout>
-    {/* <SEO title="Home" /> */}
+    <SEO title="Home" />
     <StyledHero home="true" img={data.defaultBcg.childImageSharp.fluid}>
-<Banner
+      <Banner
         title="continue exploring"
         info=" Lorem ipsum, dolor sit amet consectetur adipisicing elit. Dolore, aut?"
       >
@@ -24,20 +22,21 @@ const index = () => (
         </Link>
       </Banner>
     </StyledHero>
-      
+
     <About />
     <Services />
   </Layout>
 )
-)
-export const query `
-query {
-  defaultBcg: file(relativePath:{eq:"defaultBcg.jpeg"}){
-    childImageSharp{
-      fluid(quality:90, maxWidth:4160){
-        src
+
+export const query = graphql`
+  query {
+    defaultBcg: file(relativePath: { eq: "defaultBcg.jpeg" }) {
+      childImageSharp {
+        fluid(quality: 90, maxWidth: 4160) {
+          ...GatsbyImageSharpFluid_tracedSVG
+        }
       }
     }
   }
-}
 `
+export default Index
