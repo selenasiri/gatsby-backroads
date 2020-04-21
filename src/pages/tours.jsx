@@ -5,7 +5,6 @@ import Header from '../examples/RegularHeader'
 import SEO from '../components/SEO'
 import StyledHero from '../components/StyledHero'
 import { graphql } from 'gatsby'
-
 const toursPage = ({ data }) => {
   return (
     <Layout>
@@ -17,7 +16,6 @@ const toursPage = ({ data }) => {
     </Layout>
   )
 }
-
 export const query = graphql`
   query {
     defaultBcg: file(relativePath: { eq: "defaultBcg.jpeg" }) {

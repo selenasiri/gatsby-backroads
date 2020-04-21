@@ -10,14 +10,10 @@ const ContactPage = ({ data }) => {
     <Layout>
       <SEO title="Contact" />
       <StyledHero img={data.contactBcg.childImageSharp.fluid} />
-
       <Contact />
-      
-      <h1>Contact</h1>
     </Layout>
   )
 }
-
 export const query = graphql`
   query {
     contactBcg: file(relativePath: { eq: "connectBcg.jpeg" }) {
@@ -29,5 +25,4 @@ export const query = graphql`
     }
   }
 `
-
 export default ContactPage

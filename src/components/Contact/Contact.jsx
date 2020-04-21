@@ -1,7 +1,6 @@
 import React from 'react'
 import Title from '../Title'
 import styles from '../../css/contact.module.css'
-
 const Contact = () => {
   return (
     <section className={styles.contact}>

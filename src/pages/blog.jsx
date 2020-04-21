@@ -6,7 +6,7 @@ import StyledHero from '../components/StyledHero'
 
 const blog = ({ data }) => {
   console.log('yyy', data)
-
+  
   return (
     <Layout>
       <SEO title="Blog" />
@@ -16,7 +16,6 @@ const blog = ({ data }) => {
     </Layout>
   )
 }
-
 export const query = graphql`
   query {
     blogBcg: file(relativePath: { eq: "blogBcg.jpeg" }) {
@@ -28,5 +27,4 @@ export const query = graphql`
     }
   }
 `
-
 export default blog
