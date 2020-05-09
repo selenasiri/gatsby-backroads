@@ -8,6 +8,7 @@ import Services from '../components/Home/Services'
 import SEO from '../components/SEO'
 import StyledHero from '../components/StyledHero'
 import { graphql } from 'gatsby'
+import FeaturedTours from '../components/Home/FeaturedTours'
 
 const IndexPage = ({ data }) => (
   <Layout>
@@ -25,6 +26,7 @@ const IndexPage = ({ data }) => (
 
     <About />
     <Services />
+    <FeaturedTours />
   </Layout>
 )
 
