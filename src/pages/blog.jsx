@@ -6,7 +6,7 @@ import StyledHero from '../components/StyledHero'
 
 const blog = ({ data }) => {
   console.log('yyy', data)
-  
+
   return (
     <Layout>
       <SEO title="Blog" />
@@ -21,7 +21,7 @@ export const query = graphql`
     blogBcg: file(relativePath: { eq: "blogBcg.jpeg" }) {
       childImageSharp {
         fluid(quality: 90, maxWidth: 4160) {
-         ...GatsbyImageSharpFluid_tracedSVG
+          ...GatsbyImageSharpFluid_tracedSVG
         }
       }
     }

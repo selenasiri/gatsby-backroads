@@ -33,10 +33,15 @@ const About = () => {
         </article>
         <article className={styles.aboutInfo}>
           <h4>explore the difference </h4>
-          <p>Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint alias
-            eum debitis.</p>
-          <p> Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint alias
-            eum debitis.</p>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint alias
+            eum debitis.
+          </p>
+          <p>
+            {' '}
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Sint alias
+            eum debitis.
+          </p>
           <button type="button" className="btn-primary">
             read more
           </button>
