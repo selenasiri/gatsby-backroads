@@ -8,19 +8,16 @@ import AniLink from 'gatsby-plugin-transition-link/AniLink'
 const getTours = graphql`
   query {
     featuredTours: allContentfulTour(filter: { featured: { eq: true } }) {
-      totalCount
-      edges {
-        node {
-          name
-          price
-          slug
-          country
-          id: contentful_id
-          days
-          images {
-            fluid {
-              ...GatsbyContentfulFluid_tracedSVG
-            }
+      nodes {
+        name
+        price
+        slug
+        country
+        id: contentful_id
+        days
+        images {
+          fluid {
+            ...GatsbyContentfulFluid_tracedSVG
           }
         }
       }
@@ -29,27 +26,27 @@ const getTours = graphql`
 `
 
 const FeaturedTours = () => {
-    const data = useStaticQuery(getTours)
-    const tours = data.featuredTours.edges
-    console.log(tours)
+  const data = useStaticQuery(getTours)
+  const tours = data.featuredTours.nodes
+  console.log(tours)
 
-    console.log('ssss', data)
+  console.log('ssss', data)
 
-    return (
-        <section className={styles.tours}>
-            <Title title="featured" subtitle="tours" />
+  return (
+    <section className={styles.tours}>
+      <Title title="featured" subtitle="tours" />
 
-            <div className={styles.center}>
-                {tours.map(({ node }) => {
-                    return <Tour key={node.id} tour={node} />
-                })}
-            </div>
+      <div className={styles.center}>
+        {tours.map(node => {
+          return <Tour key={node.id} tour={node} />
+        })}
+      </div>
 
-            <AniLink fade to="/tours" className="btn-primary">
-                all tours
+      <AniLink fade to="/tours" className="btn-primary">
+        all tours
       </AniLink>
-        </section>
-    )
+    </section>
+  )
 }
 
 export default FeaturedTours

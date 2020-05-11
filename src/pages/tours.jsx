@@ -1,18 +1,16 @@
 import React from 'react'
 import Layout from '../components/Layout'
-import Button from '../examples/Button'
-import Header from '../examples/RegularHeader'
 import SEO from '../components/SEO'
 import StyledHero from '../components/StyledHero'
+import Tours from '../components/Tours/Tours'
 import { graphql } from 'gatsby'
 const toursPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Tours" />
       <StyledHero img={data.defaultBcg.childImageSharp.fluid}></StyledHero>
-      <h1>Tours</h1>
 
-      <Header />
+      <Tours />
     </Layout>
   )
 }

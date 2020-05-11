@@ -8,31 +8,37 @@ const Tour = ({ tour }) => {
   const { name, price, country, days, slug, images } = tour
   console.log(images)
 
-  let mainImage = images[0].fluid;
+  let mainImage = images[0].fluid
 
-  return <article>
-    <div className={styles.imgContainer}>
-      <Image fluid={mainImage} className={styles.img} alt="single tour" />
-      <AniLink fade className={styles.link} to={`/tours/${slug}
-      `}>
-        details
-      </AniLink>
-    </div>
+  return (
+    <article>
+      <div className={styles.imgContainer}>
+        <Image fluid={mainImage} className={styles.img} alt="single tour" />
+        <AniLink
+          fade
+          className={styles.link}
+          to={`/tours/${slug}
+      `}
+        >
+          details
+        </AniLink>
+      </div>
 
-    <div className={styles.footer}>
-      <h3>{name}</h3>
-      <div className={styles.info}>
-        <h4 className={styles.country}>
-          <FaMap className={styles.icon} />
-          {country}
-        </h4>
-        <div className={styles.details}>
-          <h6> {days} days</h6>
-          <h6>from ${price}</h6>
+      <div className={styles.footer}>
+        <h3>{name}</h3>
+        <div className={styles.info}>
+          <h4 className={styles.country}>
+            <FaMap className={styles.icon} />
+            {country}
+          </h4>
+          <div className={styles.details}>
+            <h6> {days} days</h6>
+            <h6>from ${price}</h6>
+          </div>
         </div>
       </div>
-    </div>
-  </article>
+    </article>
+  )
 }
 
 export default Tour
