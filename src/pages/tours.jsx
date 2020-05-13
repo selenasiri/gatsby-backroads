@@ -4,12 +4,12 @@ import SEO from '../components/SEO'
 import StyledHero from '../components/StyledHero'
 import Tours from '../components/Tours/Tours'
 import { graphql } from 'gatsby'
+
 const toursPage = ({ data }) => {
   return (
     <Layout>
       <SEO title="Tours" />
       <StyledHero img={data.defaultBcg.childImageSharp.fluid}></StyledHero>
-
       <Tours />
     </Layout>
   )

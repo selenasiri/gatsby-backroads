@@ -17,8 +17,7 @@ const Tour = ({ tour }) => {
         <AniLink
           fade
           className={styles.link}
-          to={`/tours/${slug}
-      `}
+          to={`/tours/${slug}`}
         >
           details
         </AniLink>
